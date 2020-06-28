@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block head %}
+    <title>Sign Up</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <form action='/signup', method='POST'>
+            <label for="username">Username:</label>
+            <input class="form-control" type="text" value="{{ post.username }}" name='username' id='username'>
+            <br>
+            <label for="password">Password:</label>
+            <input class="form-control" type="text" value="{{ post. }}" name='author' id='author'>
+            <br>
+            <label for="content">Content:</label>
+            <textarea class="form-control" name='content' id='content' rows="3">{{ post.content }}</textarea>
+            <br>
+            <input type='submit' value='Save'>
+        </form>    
+    </div>
+{% endblock %}
